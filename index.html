@@ -4,14 +4,37 @@
   <head>
     <meta charset="utf-8">
     <title>STI User Developer Test</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="assets/styles/css/styles.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <link rel="stylesheet" href="assets/styles/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/styles/css/styles.min.css">
+    <script src="assets/scripts/angular.min.js"></script>
     <script src="assets/scripts/index.js"></script>
   </head>
-  <body class="container" ng-controller="MainController">
-    <div>
-
+  <body ng-controller="MainController">
+    <div class="container">
+      <img class="logo" src="assets/images/STI_Logo.svg" alt="STI Logo"/>
+      <div class="title">Title: {{ card.title }}</div>
+      <hr>
+      <div class="overview" ng-show="card.title == 'Overview'">
+        <img class="image" ng-src="assets/images/{{ card.image }}" alt="{{ card.image }}">
+        <div class="clientInfo">
+          <div class="firstName">First Name: {{ card.firstName }}</div>
+          <div class="lastName">Last Name: {{ card.lastName }}</div>
+          <div class="gender">Gender: {{ card.gender }}</div>
+          <div class="occupation">Occupation: {{ card.occupation }}</div>
+          <div class="age">Age: {{ card.age }}</div>
+          <div class="location">Location: {{ card.location }}</div>
+          <div class="medications">Medications:
+            <span ng-repeat="medication in card.medications">
+              {{ medication.name }}{{ $last ? '' : ', ' }}
+            </span>
+          </div>
+          <div class="summary">Summary: {{ card.summary }}</div>
+        </div>
+      </div>
+      <div class="details" ng-show="card.title == 'Details'">
+        Details: {{ card.details }}<br>
+      </div>
+      <button class="btn" ng-click="toggleInfo()">Show {{ otherTitle }}</button>
     </div>
   </body>
 </html>

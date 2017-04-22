@@ -1,4 +1,78 @@
+// Primary colour, use in small amounts
+$STI-green: #82bc41;
+// Secondary colours (print)
+$STI-print-blue: #198cc5;
+$STI-print-yellow: #efd119;
+$STI-print-grey: #e8e5df;
+// Secondary colours (web)
+$STI-web-white: #f4f1e9;
+$STI-web-grey1: #eae6da;
+$STI-web-grey2: #c8c4b6;
+$STI-web-grey3: #a09d95;
+$STI-web-grey4: #66645e;
+$STI-web-bluegrey1: #acc0c1;
+$STI-web-bluegrey2: #93b1b8;
+$STI-web-bluegrey3: #485b5b;
+
 body {
-  margin: 0;
-  padding: 0;
+  background-color: $STI-web-white;
+  padding-top: 20px;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  
+  .container {
+      
+    .logo {
+      margin-bottom: 10px;
+    }
+    
+    .title {
+      font-size: 18px;
+      padding: 8px 0;
+    }
+    
+    hr {
+      border-color: $STI-web-grey4;
+      margin: 0 0 10px 0;
+    }
+    
+    .overview, .details {
+      height: 260px;
+    }
+    
+    .overview {
+      
+      .image {
+        max-width: 50%;
+        height: 100%;
+        object-fit: cover;
+        float: right;
+      }
+      
+      .clientInfo, .details {
+        overflow-y: scroll;
+      }
+      
+      .clientInfo {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        text-transform: capitalize;
+
+        .summary {
+          text-transform: none;
+        }
+      }
+
+      .details {
+        
+      }
+    }
+
+    .btn {
+      display: block;
+      margin: 20px 0 0 auto;
+      width: 130px;
+    }
+  }
 }

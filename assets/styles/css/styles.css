@@ -1,3 +1,39 @@
 body {
-  margin: 0;
-  padding: 0; }
+  background-color: #f4f1e9;
+  padding-top: 20px;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px; }
+  body .container .logo {
+    margin-bottom: 10px; }
+  body .container .title {
+    font-size: 18px;
+    padding: 8px 0; }
+  body .container hr {
+    border-color: #66645e;
+    margin: 0 0 10px 0; }
+  body .container .overview, body .container .details {
+    height: 260px; }
+  body .container .overview .image {
+    max-width: 50%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    float: right; }
+  body .container .overview .clientInfo, body .container .overview .details {
+    overflow-y: scroll; }
+  body .container .overview .clientInfo {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-transform: capitalize; }
+    body .container .overview .clientInfo .summary {
+      text-transform: none; }
+  body .container .btn {
+    display: block;
+    margin: 20px 0 0 auto;
+    width: 130px; }

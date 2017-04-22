@@ -42,6 +42,8 @@ html {
       }
 
       .title {
+        background: $STI-green;
+        background: linear-gradient(to right, $STI-green, transparent);
         font-size: 18px;
         padding: 8px 0;
       }
@@ -81,6 +83,7 @@ html {
       }
 
       .btn {
+        border: 1px solid $STI-web-bluegrey2;
         display: block;
         margin: 20px 0 0 auto;
         width: 130px;

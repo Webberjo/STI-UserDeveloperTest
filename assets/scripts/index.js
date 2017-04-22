@@ -1,6 +1,7 @@
 var app = angular.module('STI-User-Developer-Test', []);
 
 app.controller('MainController', ['$http','$scope', function($http, $scope) {
+  $scope.loading = true;
   $scope.card = [];
   $scope.otherTitle = '';
   
@@ -13,6 +14,7 @@ app.controller('MainController', ['$http','$scope', function($http, $scope) {
     $scope.card.title = 'Overview';
     $scope.otherTitle = 'Details';
     $scope.card.showOverview = true;
+    $scope.loading = false;
   });
   
   $scope.toggleInfo = function() {

@@ -3,6 +3,8 @@
 <html ng-app="STI-User-Developer-Test">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
     <title>STI User Developer Test</title>
     <link rel="stylesheet" href="assets/styles/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/styles/css/styles.min.css">
@@ -10,7 +12,8 @@
     <script src="assets/scripts/index.js"></script>
   </head>
   <body ng-controller="MainController">
-    <div class="container">
+    <div class="loading" ng-show="loading"></div>
+    <div class="container" ng-hide="loading">
       <img class="logo" src="assets/images/STI_Logo.svg" alt="STI Logo"/>
       <div class="title">Title: {{ card.title }}</div>
       <hr>

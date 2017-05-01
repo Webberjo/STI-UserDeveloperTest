@@ -7,7 +7,9 @@ As part of STI's screening process, applicants are requested to complete a test 
 
 ## Installing Dependencies
 **You do not need to install dependencies unless you plan on making changes to the styles.**  
-This project uses gulp to compile and minify SCSS files into CSS files. To install gulp you must first have node.js installed. You can install the current node.js release from https://nodejs.org if you don't have it.  
+This project uses gulp and SASS to compile and minify .scss files into .css files. Gulp requires node.js, and SASS requires Ruby. Download the most current versions for both from their respective websites.  
+node.js: https://nodejs.org  
+Ruby: http://rubyinstaller.org/  
 Open a terminal and navigate to the directory you cloned this repository to, then type "npm install" and press Enter.  
 Wait for all of the dependencies to finish downloading.  
 Type "gulp" and press Enter.
